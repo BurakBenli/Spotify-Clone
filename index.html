@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <aside>
+      <figure>
+        <img src="./images/spotify-logo.png" alt="" />
+        <img src="./images/no-text.png" alt="" class="no-text" />
+        <nav>
+          <a href=""><i class="bi bi-house-fill"></i><span>Anasayfa</span></a>
+          <a href=""><i class="bi bi-search"></i><span>Arama</span></a>
+          <a href=""><i class="bi bi-collection"></i><span>Kütüphane</span></a>
+          <a href=""
+            ><i class="bi bi-music-note-list"></i
+            ><span>Çalma Listeleri</span></a
+          >
+          <a href=""
+            ><i class="bi bi-heart"></i><span>Beğenilen Şarkılar</span></a
+          >
+        </nav>
+      </figure>
+    </aside>
+    <main>
+      <header>
+        <form>
+          <div class="search">
+            <div class="search-input">
+              <input type="text" placeholder="Müzik arayın..." />
+              <i class="bi bi-search"></i>
+            </div>
+          </div>
+          <i class="bi bi-list" id="menu"></i>
+          <ul>
+            <li>Premium</li>
+            <li>Destek</li>
+            <li>Oturum Aç</li>
+            <li>Kayıt Ol</li>
+          </ul>
+        </form>
+      </header>
+
+      <div class="songs">
+        <h2>Türkiye'de En Popüler</h2>
+        <div class="list"></div>
+      </div>
+    </main>
+
+    <div class="playing">
+      <div class="info">
+        <!-- <img
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/62/c0/02/62c00214-56b4-4152-5560-cd7373bc2028/artwork.jpg/400x400cc.jpg"
+          id="info-img"
+          class="animate"
+          alt=""
+        />
+        <div>
+          <p>Şu an oynatılıyor...</p>
+          <h3>title</h3>
+        </div> -->
+      </div>
+      <audio controls>
+        <source />
+      </audio>
+    </div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

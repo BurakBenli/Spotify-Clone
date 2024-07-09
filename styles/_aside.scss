@@ -1,0 +1,47 @@
+aside {
+  padding: 20px 15px;
+  margin: 10px;
+  background: $card-background;
+  border-radius: $radius;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  figure {
+    .no-text {
+      display: none;
+      @include ipad {
+        display: block;
+        width: 40px;
+      }
+    }
+    img {
+      max-width: 130px;
+      cursor: pointer;
+      @include ipad {
+        display: none;
+      }
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+      white-space: nowrap;
+      a {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        i {
+          @include ipad {
+            font-size: 27px;
+          }
+        }
+        span {
+          @include ipad {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

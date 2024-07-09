@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+aside {
+  padding: 20px 15px;
+  margin: 10px;
+  background: #242424;
+  border-radius: 10px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+aside figure .no-text {
+  display: none;
+}
+@media (max-width: 800px) {
+  aside figure .no-text {
+    display: block;
+    width: 40px;
+  }
+}
+aside figure img {
+  max-width: 130px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  aside figure img {
+    display: none;
+  }
+}
+aside figure nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+  white-space: nowrap;
+}
+aside figure nav a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  aside figure nav a i {
+    font-size: 27px;
+  }
+}
+@media (max-width: 800px) {
+  aside figure nav a span {
+    display: none;
+  }
+}
+
+main {
+  width: 100%;
+  margin: 10px;
+  background: #242424;
+  border-radius: 10px;
+  margin-bottom: 80px;
+}
+main header form {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #121212;
+  margin: 10px;
+  gap: 40px;
+  border-radius: 10px;
+}
+main header form #menu {
+  font-size: 25px;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  main header form #menu {
+    display: block;
+  }
+}
+main header form .search-input {
+  position: relative;
+}
+main header form .search-input input {
+  background: black;
+  outline: none;
+  border: none;
+  max-width: 500px;
+  width: 500px;
+  padding: 15px 20px;
+  color: #fff;
+  border-radius: 10px;
+}
+@media (max-width: 1000px) {
+  main header form .search-input input {
+    width: 250px;
+  }
+}
+@media (max-width: 850px) {
+  main header form .search-input input {
+    width: 300px;
+  }
+}
+@media (max-width: 800px) {
+  main header form .search-input input {
+    width: 275px;
+  }
+}
+@media (max-width: 670px) {
+  main header form .search-input input {
+    width: 250px;
+  }
+}
+@media (max-width: 570px) {
+  main header form .search-input input {
+    width: 200px;
+  }
+}
+main header form .search-input input:focus {
+  box-shadow: 0 0 10px rgb(56, 56, 56);
+}
+main header form .search-input i {
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+  top: 10px;
+  z-index: 1000;
+}
+main header form ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media (max-width: 800px) {
+  main header form ul {
+    display: none;
+  }
+}
+main header form ul :nth-child(4) {
+  background: #1cdf63;
+  padding: 8px;
+  border-radius: 10px;
+  color: black !important;
+}
+main header form ul :nth-child(4):hover {
+  scale: 0.98;
+  background-color: #159845;
+}
+main header form ul li {
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 1.7px;
+  color: rgba(255, 255, 255, 0.781);
+  transition: all 0.3s;
+}
+main header form ul li:hover {
+  color: #fff;
+}
+main .songs h2 {
+  padding: 20px;
+  cursor: pointer;
+}
+main .songs h2:hover {
+  text-decoration: underline;
+}
+main .songs .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+main .songs .list .card {
+  width: 200px;
+  background: #121212;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main .songs .list .card h4 {
+  margin-bottom: 6px;
+}
+main .songs .list .card:hover {
+  opacity: 1;
+}
+main .songs .list .card:hover .play {
+  bottom: 20px;
+  opacity: 1;
+}
+main .songs .list .card figure {
+  position: relative;
+}
+main .songs .list .card figure img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+main .songs .list .card figure .play {
+  background: #1cdf63;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: all 0.4s;
+  opacity: 0;
+}
+main .songs .list .card figure .play:hover {
+  scale: 1.2;
+  background: #16af4e;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 30px;
+  z-index: 1000;
+  background: black;
+  top: 110px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.playing {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, black, #01703c);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 50px;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+.playing .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.playing .info p:nth-child(1) {
+  color: #d6eab5;
+  margin-bottom: 5px;
+}
+.playing .info img {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.animate {
+  animation: turn 3s infinite linear;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.781);
+  font-family: "Poppins";
+  overflow-x: hidden;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.781);
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+a:hover {
+  background: #1cdf63;
+  color: black;
+}/*# sourceMappingURL=style.css.map */
