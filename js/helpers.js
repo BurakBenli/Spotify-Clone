@@ -8,4 +8,4 @@ export const elements = {
   menu: document.querySelector("#menu"),
   ulList: document.querySelector("ul"),
 };
-console.log(elements.ulList);
+//console.log(elements.ulList);

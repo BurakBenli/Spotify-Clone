@@ -1,6 +1,6 @@
 import { renderSongs } from "./ui.js";
 
-const url = 'https://shazam.p.rapidapi.com/artists/get-top-songs?id=567072&l=en-US';
+const url = 'https://shazam.p.rapidapi.com/artists/get-top-songs?id=567072&l=tr-TR';
 const options = {
 	method: 'GET',
 	headers: {
@@ -19,7 +19,8 @@ export class API {
     const res = await fetch(url, options);
     const data = await res.json();
     //* API'den aldığımız şarkıları song dizisine aktartdık
-    this.songs = data.tracks;
+    //console.log(data)
+    this.songs = data.data;
     //* Ekrana popüler müzikleri aktaracak fonksiyona songs dizisini parametre olarak gönderdik
     renderSongs(this.songs);
   }
